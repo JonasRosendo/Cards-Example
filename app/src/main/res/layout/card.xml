@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txv_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txv_hora_post"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:text="Agora mesmo"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/txv_titulo"
+            app:layout_constraintStart_toStartOf="@+id/txv_titulo"
+            app:layout_constraintTop_toBottomOf="@+id/txv_titulo" />
+
+        <ImageView
+            android:id="@+id/imgv_post"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@+id/txv_titulo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txv_titulo"
+            app:layout_constraintTop_toBottomOf="@+id/txv_hora_post"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/txv_post"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Conteudo"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="@+id/txv_titulo"
+            app:layout_constraintStart_toStartOf="@+id/txv_titulo"
+            app:layout_constraintTop_toBottomOf="@+id/imgv_post" />
+
+        <Button
+            android:id="@+id/btn_curtir"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_curtir"
+            android:text="Curtir"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toStartOf="@+id/btn_comentar"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/imgv_post"
+            app:layout_constraintTop_toBottomOf="@+id/txv_post" />
+
+        <Button
+            android:id="@+id/btn_comentar"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="8dp"
+            android:drawableStart="@drawable/ic_comentar"
+            android:text="comentar"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_curtir"
+            app:layout_constraintEnd_toEndOf="@+id/imgv_post"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_curtir"
+            app:layout_constraintTop_toTopOf="@+id/btn_curtir"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
